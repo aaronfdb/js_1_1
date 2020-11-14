@@ -18,11 +18,12 @@
         <![endif]-->
         
         <script>
-          // manipulate arrays with shift()
+          // manipulate arrays with unshift()
          // Setup
             var myArray = [["John", 23], ["dog", 3]];
-        // Only change code below this line
-            var removedFromMyArray = myArray.shift();
+            myArray.shift();
+        // add "Paul", 35 to the beginning of myArray
+            myArray.unshift(["Paul", 35]);
         </script>
     </body>
 </html>
