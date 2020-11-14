@@ -18,19 +18,14 @@
         <![endif]-->
         
         <script>
-          // understanding undefined value returned from a function
+          // assignment with a returned value
         // Setup
-            var sum = 0;
-            function addThree() {
-                sum = sum + 3;
+            var processed = 0;
+            function processArg(num) {
+            return (num + 3) / 5;
             }
-        // Only change code below this line
-            function addFive() {
-                sum = sum + 5;
-            }
-        // Only change code above this line
-        addThree();
-        addFive();
+        // calll the processArg function with an argument of 7
+            processed = processArg(7);
         </script>
     </body>
 </html>
