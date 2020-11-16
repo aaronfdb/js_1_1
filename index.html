@@ -18,17 +18,19 @@
         <![endif]-->
         
         <script>
-          // Comparison with the Logical Or Operator
-            function testLogicalOr(val) {
+          // Introducing Else Statements
+          function testElse(val) {
+            var result = "";
             // Only change code below this line
-            if (val <= 9 || val >= 21) {
-            return "Outside";
+            if (val > 5) {
+            result = "Bigger than 5";
+            } else {
+            return "5 or Smaller";
             }
             // Only change code above this line
-            return "Inside";
+            return result;
             }
-            testLogicalOr(15);
-
+            testElse(4);
         </script>
     </body>
 </html>
