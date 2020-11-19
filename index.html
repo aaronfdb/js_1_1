@@ -18,25 +18,28 @@
         <![endif]-->
         
         <script>
-          // Selecting from many options with Switch Statements
-            // Only change code below this line
+          // Adding a Default Option in Switch Statements
+            function switchOfStuff(val) {
+            var answer = "";
+        // Only change code below this line
             switch(val) {
-                case 1:
-                    return "alpha";
+                case "a":
+                    return "apple";
                     break;
-                case 2:
-                    return "beta";
+                case "b":
+                    return "bird";
                     break;
-                case 3:
-                    return "gamma";
+                case "c":
+                    return "cat";
                     break;
-                case 4:
-                    return "delta";
+                default:
+                    return "stuff";
                     break;
-                }
-                // Only change code above this line
-                return answer;
-                caseInSwitch(1);
+            }
+  // Only change code above this line
+            return answer;
+            }
+switchOfStuff(1);
         </script>
     </body>
 </html>
