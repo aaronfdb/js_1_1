@@ -13,13 +13,15 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        // Create a Module Script
-        // Only change code below this line
-        <!-- Only change code below this line -->
-    <script type="module" src="index.js"></script>
-        <!-- Only change code above this line -->
+    <script>
+        // Use export to Share a Code Block
+        const uppercaseString = (string) => {
+            return string.toUpperCase();
+        }
+            export { uppercaseString, lowercaseString};
+        const lowercaseString = (string) => {
+            return string.toLowerCase()
+        }
+    </script>
     </body>
 </html>
