@@ -14,14 +14,11 @@
     </head>
     <body>
     <script>
-        // Use export to Share a Code Block
-        const uppercaseString = (string) => {
-            return string.toUpperCase();
-        }
-            export { uppercaseString, lowercaseString};
-        const lowercaseString = (string) => {
-            return string.toLowerCase()
-        }
+        // Reuse JavaScript Code using Import
+        import { uppercaseString, lowercaseString } from './string_functions.js'; 
+        // Only change code above this line
+        uppercaseString("hello");
+        lowercaseString("WORLD!");
     </script>
     </body>
 </html>
