@@ -14,10 +14,10 @@
     </head>
     <body>
     <script>
-    // Regular Expressions Ignore Case While Matching
-        let myString = "freeCodeCamp";
-        let fccRegex = /freecodecamp/i; // Change this line
-        let result = fccRegex.test(myString);
+    // Regular Expressions Extract Matches
+        let extractStr = "Extract the word 'coding' from this string.";
+        let codingRegex = /coding/; // Change this line
+        let result = extractStr.match(codingRegex); // Change this line
     </script>
     </body>
 </html>
