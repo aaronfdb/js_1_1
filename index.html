@@ -14,12 +14,10 @@
     </head>
     <body>
     <script>
-    // Regular Expressions Match Characters that occur zero or more times
-        // Only change code below this line
-        let chewieQuote = "Aaaaaaaaaaaaaaaarrrgh!";
-        let chewieRegex = /Aa*/; // Change this line
-        // Only change code above this line
-        let result = chewieQuote.match(chewieRegex);
+    // Regular Expressions Find Characters with Lazy Matching
+        let text = "<h1>Winter is coming</h1>";
+        let myRegex = /<.*?>/; // Change this line
+        let result = text.match(myRegex);
     </script>
     </body>
 </html>
