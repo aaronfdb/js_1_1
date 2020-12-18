@@ -14,10 +14,10 @@
     </head>
     <body>
     <script>
-    // Regular Expressions Check for All or None
-        let favWord = "favorite";
-        let favRegex = /favou?rite/; // Change this line
-        let result = favRegex.test(favWord);
+    // Regular Expressions Positive and Negative Lookahead
+        let sampleWord = "astronaut";
+        let pwRegex = /^\D(?=\w{5})(?=\w*\d{2})/; // Change this line
+        let result = pwRegex.test(sampleWord);
     </script>
     </body>
 </html>
