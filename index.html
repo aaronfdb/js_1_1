@@ -14,14 +14,14 @@
     </head>
     <body>
     <script>
-    // Debugging Catch Missing Open and Closing Parenthesis After a Function Call
-        function getNine() {
-        let x = 6;
-        let y = 3;
-        return x + y;
+    // Debugging Catch Arguments Passed in the Wrong Order when calling a Function Call
+        function raiseToPower(b, e) {
+        return Math.pow(b, e);
         }
-        let result = getNine();
-        console.log(result);
+        let base = 2;
+        let exp = 3;
+        let power = raiseToPower(base, exp);
+        console.log(power);
     </script>
     </body>
 </html>
