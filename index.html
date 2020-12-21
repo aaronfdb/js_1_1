@@ -14,15 +14,13 @@
     </head>
     <body>
     <script>
-    // Debugging Catch Use of Assignment Operator Instead of Equality Operator
-        let x = 7;
-        let y = 9;
-        let result = "to come";
-        if(x == y) {
-            result = "Equal!";
-        } else {
-            result = "Not equal!";
+    // Debugging Catch Missing Open and Closing Parenthesis After a Function Call
+        function getNine() {
+        let x = 6;
+        let y = 3;
+        return x + y;
         }
+        let result = getNine();
         console.log(result);
     </script>
     </body>
