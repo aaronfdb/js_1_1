@@ -14,12 +14,14 @@
     </head>
     <body>
     <script>
-    // Basic Data Structures Remove items using splice()
-        const arr = [2, 4, 5, 1, 7, 5, 2, 1];
+    // Basic Data Structures Add items using splice()
+        function htmlColorNames(arr) {
     // Only change code below this line
-        arr.splice(1, 4);
+        arr.splice(0, 2, "DarkSalmon", "BlanchedAlmond");
     // Only change code above this line
-        console.log(arr);
+            return arr;
+        }
+        console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
     </script>
     </body>
 </html>
