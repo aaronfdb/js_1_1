@@ -14,13 +14,16 @@
     </head>
     <body>
     <script>
-    // Basic Data Combine Arrays with the Spread Operator
-        function spreadOut() {
-            let fragment = ['to', 'code'];
-            let sentence = ['learning', ...fragment, 'is', 'fun']; // Change this line
-            return sentence;
+    // Basic Data Check for the presence of an element with indexOf()
+        function quickCheck(arr, elem) {
+    // Only change code below this line
+            if (arr.indexOf(elem) >=0) {
+                return true;
+            }
+                return false;
+    // Only change code above this line
         }
-        console.log(spreadOut());
+        console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
     </script>
     </body>
 </html>
