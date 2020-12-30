@@ -14,19 +14,16 @@
     </head>
     <body>
     <script>
-    // Basic Data Structures Iterate through all an Array's items using For Loops
-        function filteredArray(arr, elem) {
-            let newArr = [];
+    // Basic Data Structures Create complex multi-dimensional arrays
+        let myNestedArray = [
     // Only change code below this line
-            for (let i = 0; i < arr.length; i++) {
-                if (arr[i].indexOf(elem) == -1) {
-                newArr.push(arr[i]);
-                }
-            }
+            ['unshift', false, 1, 2, 3, 'complex', 'nested'],
+            ['loop', 'shift', 6, 7, 1000, 'method'],
+            ['concat', false, true, 'spread', 'array', ['deep']],
+            ['mutate', 1327.98, 'splice', 'slice', 'push', [['deeper']]],
+            ['iterate', 1.3849, 7, '8.4876', 'arbitrary', 'depth', [[['deepest']]]]
     // Only change code above this line
-            return newArr;
-        }
-        console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
+        ];
     </script>
     </body>
 </html>
