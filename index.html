@@ -14,16 +14,19 @@
     </head>
     <body>
     <script>
-    // Basic Data Check for the presence of an element with indexOf()
-        function quickCheck(arr, elem) {
+    // Basic Data Structures Iterate through all an Array's items using For Loops
+        function filteredArray(arr, elem) {
+            let newArr = [];
     // Only change code below this line
-            if (arr.indexOf(elem) >=0) {
-                return true;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i].indexOf(elem) == -1) {
+                newArr.push(arr[i]);
+                }
             }
-                return false;
     // Only change code above this line
+            return newArr;
         }
-        console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+        console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
     </script>
     </body>
 </html>
