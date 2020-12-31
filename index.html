@@ -14,7 +14,7 @@
     </head>
     <body>
     <script>
-    // Basic Data Structures Access Property Names with Bracket Notation
+    // Basic Data Structures Use the delete Keyword to Remove Object Properties
         let foods = {
             apples: 25,
             oranges: 32,
@@ -23,12 +23,12 @@
             grapes: 35,
             strawberries: 27
         };
-        function checkInventory(scannedItem) {
     // Only change code below this line
-            return foods[scannedItem];
+        delete foods.oranges;
+        delete foods.plums;
+        delete foods.strawberries;
     // Only change code above this line
-        }
-        console.log(checkInventory("apples"));
+        console.log(foods);
     </script>
     </body>
 </html>
