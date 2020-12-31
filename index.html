@@ -14,16 +14,14 @@
     </head>
     <body>
     <script>
-    // Basic Algorithm Scripting Convert Celsius to Fahrenheit
-        function convertToF(celsius) {
-        var fahrenheit = celsius *(9/5) + 32;
-            if (typeof fahrenheit != "undefined") {
-                return fahrenheit;
-            } else {
-                return "fahrenheit not defined";
+    // Basic Algorithm Scripting Reverse a String
+        function reverseString(str) {
+            for (var reversedStr = "", i = str.length -1; i >= 0; i --) {
+            reversedStr += str[i];
             }
+            return reversedStr;
         }
-        convertToF(30);
+        reverseString("hello");
     </script>
     </body>
 </html>
