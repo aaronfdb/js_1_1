@@ -14,21 +14,39 @@
     </head>
     <body>
     <script>
-    // Basic Data Structures Use the delete Keyword to Remove Object Properties
-        let foods = {
-            apples: 25,
-            oranges: 32,
-            plums: 28,
-            bananas: 13,
-            grapes: 35,
-            strawberries: 27
+    // Basic Data Structures Check if an Object has a Property
+        let users = {
+            Alan: {
+                age: 27,
+                online: true
+            },
+            Jeff: {
+                age: 32,
+                online: true
+            },
+            Sarah: {
+                age: 48,
+                online: true
+            },
+            Ryan: {
+                age: 19,
+                online: true
+            }
         };
-    // Only change code below this line
-        delete foods.oranges;
-        delete foods.plums;
-        delete foods.strawberries;
-    // Only change code above this line
-        console.log(foods);
+        function isEveryoneHere(obj) {
+        // Only change code below this line
+            if (
+            obj.hasOwnProperty("Alan") &&
+            obj.hasOwnProperty("Jeff") &&
+            obj.hasOwnProperty("Sarah") &&
+            obj.hasOwnProperty("Ryan")
+            ) {
+            return true;
+            }
+            return false;
+        // Only change code above this line
+        }
+        console.log(isEveryoneHere(users));
     </script>
     </body>
 </html>
