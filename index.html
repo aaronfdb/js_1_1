@@ -14,11 +14,16 @@
     </head>
     <body>
     <script>
-    // Basic Algorithm Scripting Confirm the Ending
-        function confirmEnding(str, target) {
-            return str.slice(str.length - target.length) === target;
+    // Basic Algorithm Scripting Repeat a String Repeat a String
+        function repeatStringNumTimes(str, num) {
+            var accumulatedStr = "";
+            while (num > 0) {
+            accumulatedStr += str;
+            num--;
+            }
+        return accumulatedStr;
         }
-        confirmEnding("Bastian", "n");   
+        repeatStringNumTimes("abc", 3);  
     </script>
     </body>
 </html>
