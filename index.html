@@ -14,14 +14,11 @@
     </head>
     <body>
     <script>
-    // Basic Algorithm Scripting Factorialize a Number
-        function factorialize(num) {
-            for (var product =1; num > 0; num--) {
-                product *= num;
-            }
-            return product;
+    // Basic Algorithm Scripting Find the Longest Word in a String
+        function findLongestWordLength(str) {
+            return Math.max(...str.split(" ").map(word => word.length));
         }
-        factorialize(5);
+        findLongestWordLength("The quick brown fox jumped over the lazy dog");
     </script>
     </body>
 </html>
