@@ -14,14 +14,14 @@
     </head>
     <body>
     <script>
-    // Basic Algorithm Scripting Reverse a String
-        function reverseString(str) {
-            for (var reversedStr = "", i = str.length -1; i >= 0; i --) {
-            reversedStr += str[i];
+    // Basic Algorithm Scripting Factorialize a Number
+        function factorialize(num) {
+            for (var product =1; num > 0; num--) {
+                product *= num;
             }
-            return reversedStr;
+            return product;
         }
-        reverseString("hello");
+        factorialize(5);
     </script>
     </body>
 </html>
