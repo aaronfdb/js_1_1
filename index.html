@@ -14,15 +14,17 @@
     </head>
     <body>
     <script>
-    // Basic Algorithm Scripting Falsy Bouncer
-        function bouncer(arr) {
-            let newArray = [];
-            for (var i = 0; i < arr.length; i++) {
-                if (arr[i]) newArray.push (arr[i]);
+    // Basic Algorithm Scripting Where do I Belong
+        function getIndexToIns(arr, num) {
+            arr.sort (function (a, b) {
+                return a - b;
+            });
+            for (var a = 0; a < arr.length; a++) {
+                if (arr[a] >= num) return a;
             }
-        return newArray;
+            return arr.length;
         }
-        bouncer([7, "ate", "", false, 9]);
+        getIndexToIns([40, 60], 50);
     </script>
     </body>
 </html>
