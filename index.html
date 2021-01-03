@@ -14,13 +14,12 @@
     </head>
     <body>
     <script>
-    // Object Oriented Programming Make Code More Resuable with the This Keyword
-            let dog = {
-                name: "Spot",
-                numLegs: 4,
-                sayLegs: function() {return "This dog has " + this.numLegs + " legs.";}
-            };
-            dog.sayLegs();
+    // Object Oriented Programming Define a Constructor Function
+            function Dog() {
+                this.name = "Hound";
+                this.color = "Brown";
+                this.numLegs = 4;
+            }
     </script>
     </body>
 </html>
