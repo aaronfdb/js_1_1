@@ -14,16 +14,22 @@
     </head>
     <body>
     <script>
-    // Basic Algorithm Scripting Mutations
-        function mutation(arr) {
-            var test = arr[1].toLowerCase();
-            var target = arr[0].toLowerCase();
-            for (var i = 0; i < test.length; i++) {
-                if (target.indexOf(test[i]) < 0) return false;
+    // Basic Algorithm Scripting Chunky Monkey
+        function chunkArrayInGroups(arr, size) {
+            var temp = [];
+            var result = [];
+            for (var a = 0; a < arr.length; a++) {
+                if (a % size !==size -1) temp.push(arr[a]);
+                else {
+                    temp.push(arr[a]);
+                    result.push(temp);
+                    temp = [];
+                }
             }
-        return true;
+            if (temp.length !==0) result.push(temp);
+            return result;
         }
-        mutation(["hello", "hey"]);
+        chunkArrayInGroups(["a", "b", "c", "d"], 2);
     </script>
     </body>
 </html>
