@@ -14,15 +14,13 @@
     </head>
     <body>
     <script>
-    // Object Oriented Programming Create a Method of an Object
-        let dog = {
-            name: "Spot",
-            numLegs: 4,
-            sayLegs: function() {
-                return "This dog has " + dog.numLegs + " legs.";
-            }
-        };
-        dog.sayLegs();
+    // Object Oriented Programming Make Code More Resuable with the This Keyword
+            let dog = {
+                name: "Spot",
+                numLegs: 4,
+                sayLegs: function() {return "This dog has " + this.numLegs + " legs.";}
+            };
+            dog.sayLegs();
     </script>
     </body>
 </html>
