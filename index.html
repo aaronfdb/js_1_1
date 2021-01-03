@@ -14,17 +14,16 @@
     </head>
     <body>
     <script>
-    // Basic Algorithm Scripting Where do I Belong
-        function getIndexToIns(arr, num) {
-            arr.sort (function (a, b) {
-                return a - b;
-            });
-            for (var a = 0; a < arr.length; a++) {
-                if (arr[a] >= num) return a;
+    // Basic Algorithm Scripting Mutations
+        function mutation(arr) {
+            var test = arr[1].toLowerCase();
+            var target = arr[0].toLowerCase();
+            for (var i = 0; i < test.length; i++) {
+                if (target.indexOf(test[i]) < 0) return false;
             }
-            return arr.length;
+        return true;
         }
-        getIndexToIns([40, 60], 50);
+        mutation(["hello", "hey"]);
     </script>
     </body>
 </html>
