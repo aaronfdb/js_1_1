@@ -14,14 +14,15 @@
     </head>
     <body>
     <script>
-    // Object Oriented Programming Use Dot Notation to Access the Properties of an Object
+    // Object Oriented Programming Create a Method of an Object
         let dog = {
             name: "Spot",
-            numLegs: 4
+            numLegs: 4,
+            sayLegs: function() {
+                return "This dog has " + dog.numLegs + " legs.";
+            }
         };
-        // Only change code below this line
-        console.log(dog.name);
-        console.log(dog.numLegs);
+        dog.sayLegs();
     </script>
     </body>
 </html>
