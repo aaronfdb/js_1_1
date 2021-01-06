@@ -14,25 +14,25 @@
     </head>
     <body>
     <script>
-    // Object Oriented Programming Override Inherited Methods
-        function Bird() { }
-
-        Bird.prototype.fly = function() { return "I am flying!"; };
-
-        function Penguin() { }
-        Penguin.prototype = Object.create(Bird.prototype);
-        Penguin.prototype.constructor = Penguin;
-
-    // Only change code below this line
-
-        Penguin.prototype.fly = function() {
-            return "Alas, this is a flightless bird.";
+    // Object Oriented Programming Use a Mixin to Add Common Behavior Between Unrelated Objects
+        let bird = {
+            name: "Donald",
+            numLegs: 2
         };
 
-    // Only change code above this line
+        let boat = {
+            name: "Warrior",
+            type: "race-boat"
+        };
 
-        let penguin = new Penguin();
-        console.log(penguin.fly());
+    // Only change code below this line
+        let glideMixin = function(obj) {
+            obj.glide = function() {
+            console.log("Gliding!");
+            };
+        };
+        glideMixin(bird);
+        glideMixin(boat);
     </script>
     </body>
 </html>
