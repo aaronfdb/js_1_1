@@ -14,12 +14,13 @@
     </head>
     <body>
     <script>
-    // Object Oriented Programming Change the Prototype to a New Object
+    // Object Oriented Programming Remember to Set the Constructor Property when Changing the Prototype
         function Dog(name) {
             this.name = name;
         }
         Dog.prototype = {
             // Only change code below this line
+            constructor: Dog;
             numLegs: 4,
             eat: function() {
             console.log("nom nom nom");
