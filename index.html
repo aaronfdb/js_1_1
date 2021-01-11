@@ -14,16 +14,33 @@
     </head>
     <body>
     <script>
-    // Functional Programming Pass Arguments to Avoid External Dependence in a Function
+    // Functional Programming Refactor Global Variables Out of Functions
     // The global variable
-        var fixedValue = 4;
+        var bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
 
-    // Only change code below this line
-            function incrementer(value) {
-            return value + 1;
+    // Change code below this line
+        function add (arr, bookName) {
+            let newArr = [...arr];
+                newArr.push(bookName);
+                return newArr;
+  
+    // Change code above this line
+        }
+    // Change code below this line
+        function remove (arr, bookName) {
+            let newArr = [...arr];
+                if (newArr.indexOf(bookName) >= 0) {
+                newArr.splice(newArr.indexOf(bookName), 1);
+                    return newArr;
+    // Change code above this line
+                }
+        }
 
-    // Only change code above this line
-            }
+        var newBookList = add(bookList, 'A Brief History of Time');
+        var newerBookList = remove(bookList, 'On The Electrodynamics of Moving Bodies');
+        var newestBookList = remove(add(bookList, 'A Brief History of Time'), 'On The Electrodynamics of Moving Bodies');
+
+        console.log(bookList);
     </script>
     </body>
 </html>
