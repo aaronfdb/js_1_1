@@ -14,16 +14,18 @@
     </head>
     <body>
     <script>
-    // Functional Programming Use the some Method to Check that Any Elements in an Array Meet a Criteria
-        function checkPositive(arr) {
+    // Functional Programming Introduction to Currying and Partial Application
+        function add(x) {
     // Only change code below this line
-            return arr.some(function(value) {
-                return value > 0;
-            });
+            return function(y) {
+                return function(z) {
+                    return x + y + z;
+                };
+            };
 
     // Only change code above this line
         }
-        checkPositive([1, 2, 3, -4, 5]);
+        add(10)(20)(30);
     </script>
     </body>
 </html>
