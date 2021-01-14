@@ -14,18 +14,16 @@
     </head>
     <body>
     <script>
-    // Functional Programming Apply Functional Programming to Convert Strings to URL Slugs
-        // Only change code below this line
-            function urlSlug(title) {
-                return title
-                .split(/\W/)
-                .filter(obj => {
-                    return obj !== "";
-                })
-                .join("-")
-                .toLowerCase();
-            }
-        // Only change code above this line
+    // Functional Programming Use the every Method to Check that Every Element in an Array Meets a Criteria
+        function checkPositive(arr) {
+    // Only change code below this line
+            return arr.every(function(value) {
+                return value > 0;
+            });
+
+    // Only change code above this line
+        }
+        checkPositive([1, 2, 3, -4, 5]);
     </script>
     </body>
 </html>
