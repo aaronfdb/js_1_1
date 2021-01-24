@@ -14,18 +14,18 @@
     </head>
     <body>
     <script>
-    // Functional Programming Introduction to Currying and Partial Application
-        function add(x) {
-    // Only change code below this line
-            return function(y) {
-                return function(z) {
-                    return x + y + z;
-                };
-            };
-
-    // Only change code above this line
+    // Intermediate Algorithm Scripting Sum All Numbers in a Range
+        function sumAll(arr) {
+            var max = Math.max(arr[0], arr[1]);
+            var min = Math.min(arr[0], arr[1]);
+            var temp = 0;
+            for (var i = min; i <= max; i++) {
+                temp += i;
+            }
+            return temp;
         }
-        add(10)(20)(30);
+
+        sumAll([1, 4]);
     </script>
     </body>
 </html>
