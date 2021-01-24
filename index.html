@@ -14,18 +14,22 @@
     </head>
     <body>
     <script>
-    // Intermediate Algorithm Scripting Sum All Numbers in a Range
-        function sumAll(arr) {
-            var max = Math.max(arr[0], arr[1]);
-            var min = Math.min(arr[0], arr[1]);
-            var temp = 0;
-            for (var i = min; i <= max; i++) {
-                temp += i;
+    // Intermediate Algorithm Scripting Diff Two Arrays
+        function diffArray(arr1, arr2) {
+            var newArr = [];
+            function onlyInFirst(first, second) {
+                for (var i = 0; i < first.length; i++) {
+                    if (second.indexOf(first [i]) === -1) {
+                    newArr.push(first [i]);
+                    }
+                }
             }
-            return temp;
+        onlyInFirst(arr1, arr2);
+        onlyInFirst(arr2, arr1);
+            return newArr;
         }
 
-        sumAll([1, 4]);
+        diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
     </script>
     </body>
 </html>
