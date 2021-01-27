@@ -14,18 +14,18 @@
     </head>
     <body>
     <script>
-    // Intermediate Algorithm Scripting Pig Latin
-        function translatePigLatin(str) {
-            let consonantRegex = /^[^aeiou]+/;
-            let myConsonants = str.match(consonantRegex);
-            return myConsonants !== null
-                ? str
-                    .replace(consonantRegex, "")
-                    .concat(myConsonants)
-                    .concat("ay")
-                : str.concat("way");
+    // Intermediate Algorithm Scripting Search and Replace
+        function myReplace(str, before, after) {
+            var index = str.indexOf(before);
+            if (str[index] === str[index].toUpperCase()) {
+                after = after.charAt(0).toUpperCase() + after.slice(1);
+            } else {
+                after = after.charAt(0).toLowerCase() + after.slice(1);
+            }
+            str = str.replace(before, after);
+                return str;
         }
-        translatePigLatin("consonant");
+        myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
     </script>
     </body>
 </html>
