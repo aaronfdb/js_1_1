@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!<![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -14,20 +14,23 @@
     </head>
     <body>
     <script>
-    // Intermediate Algorithm Scripting Seek and Destroy
-        function destroyer(arr) {
-            var args = Array.prototype.slice.call(arguments);
-            for (var i = 0; i < arr.length; i++) {
-                for (var j = 0; j < args.length; j++) {
-                    if (arr[i] === args[j]) {
-                        delete arr[i];
+    // Intermediate Algorithm Scripting Wherefore art thou
+        function whatIsInAName(collection, source) {
+            var srcKeys = Object.keys(source);
+                return collection.filter(function(obj) {
+                    for (var i = 0; i < srcKeys.length; i++) {
+                        if (
+                            !obj.hasOwnProperty(srcKeys[i]) ||
+                            obj[srcKeys[i]] !== source[srcKeys[i]]
+                        ) {
+                            return false;
+                        }
                     }
-                }
-            }
-            return arr.filter(Boolean);
+                    return true;
+                });
+ 
         }
-
-        destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+        whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet"}])
     </script>
     </body>
 </html>
