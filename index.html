@@ -14,23 +14,16 @@
     </head>
     <body>
     <script>
-    // Intermediate Algorithm Scripting Wherefore art thou
-        function whatIsInAName(collection, source) {
-            var srcKeys = Object.keys(source);
-                return collection.filter(function(obj) {
-                    for (var i = 0; i < srcKeys.length; i++) {
-                        if (
-                            !obj.hasOwnProperty(srcKeys[i]) ||
-                            obj[srcKeys[i]] !== source[srcKeys[i]]
-                        ) {
-                            return false;
-                        }
-                    }
-                    return true;
-                });
- 
-        }
-        whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet"}])
+    // Intermediate Algorithm Scripting Spinal Tap Case
+    function spinalCase(str) {
+        str = str.replace(/([a-z])([A-Z])/g, "$1 $2");
+            return str
+                .toLowerCase()
+                .split(/(?:_| )+/)
+                .join("-");
+    }
+
+    spinalCase('This Is Spinal Tap');
     </script>
     </body>
 </html>
