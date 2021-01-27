@@ -14,18 +14,22 @@
     </head>
     <body>
     <script>
-    // Intermediate Algorithm Scripting Missing letters
-        function fearNotLetter(str) {
-            for (var i = 0; i < str.length; i++) {
-                var code = str.charCodeAt(i);
-                if (code !== str.charCodeAt(0) + i) {
-                    return String.fromCharCode(code - 1);
+    // Intermediate Algorithm Scripting Sorted Union
+    function uniteUnique(arr1, arr2, arr3) {
+        var finalArray = [];
+        for (var i = 0; i < arguments.length; i++) {
+            var arrayArguments = arguments[i];
+            for (var j = 0; j < arrayArguments.length; j++) {
+                var indexValue = arrayArguments[j];
+                    if (finalArray.indexOf(indexValue) < 0) {
+                    finalArray.push(indexValue);
                 }
             }
-            return undefined;
         }
+        return finalArray;
+    }
 
-        fearNotLetter("abce");
+    uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
     </script>
     </body>
 </html>
