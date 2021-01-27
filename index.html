@@ -14,16 +14,18 @@
     </head>
     <body>
     <script>
-    // Intermediate Algorithm Scripting Spinal Tap Case
-    function spinalCase(str) {
-        str = str.replace(/([a-z])([A-Z])/g, "$1 $2");
-            return str
-                .toLowerCase()
-                .split(/(?:_| )+/)
-                .join("-");
-    }
-
-    spinalCase('This Is Spinal Tap');
+    // Intermediate Algorithm Scripting Pig Latin
+        function translatePigLatin(str) {
+            let consonantRegex = /^[^aeiou]+/;
+            let myConsonants = str.match(consonantRegex);
+            return myConsonants !== null
+                ? str
+                    .replace(consonantRegex, "")
+                    .concat(myConsonants)
+                    .concat("ay")
+                : str.concat("way");
+        }
+        translatePigLatin("consonant");
     </script>
     </body>
 </html>
