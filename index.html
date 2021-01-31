@@ -14,20 +14,23 @@
     </head>
     <body>
     <script>
-    // Intermediate Algorithm Scripting Drop It
-    function dropElements(arr, func) {
-  var times = arr.length;
-  for (var i = 0; i < times; i++) {
-    if (func(arr[0])) {
-      break;
+    // Intermediate Algorithm Scripting Steamroller
+    function steamrollArray(arr) {
+  var flattenedArray = [];
+  var flatten = function(arg) {
+    if (!Array.isArray(arg)) {
+      flattenedArray.push(arg);
     } else {
-      arr.shift();
+      for (var a in arg) {
+        flatten (arg[a]);
+      }
     }
-  }
-  return arr;
+  };
+  arr.forEach(flatten);
+  return flattenedArray;
 }
 
-dropElements([1, 2, 3, 4], function(n) {return n < 3; });
+steamrollArray([1, [2], [3, [[4]]]]);
     </script>
     </body>
 </html>
