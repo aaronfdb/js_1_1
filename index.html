@@ -14,17 +14,36 @@
     </head>
     <body>
     <script>
-    // Intermediate Algorithm Scripting Sum All Primes
-        function sumPrimes(num) {
-            let primes = [];
-            for (let i = 2; i <= num; i++) {
-                if (primes.every((prime) => i % prime !== 0))
-                primes.push(i);
-            }
-            return primes.reduce((sum, prime) => sum + prime, 0);
-        }
+    // Intermediate Algorithm Scripting Smallest Common Multiple
+    function smallestCommons(arr) {
+  arr.sort(function(a, b) {
+    return b - a;
+  });
 
-        sumPrimes(10);
+  var newArr = [];
+  for (var i = arr[0]; i >= arr[1]; i--) {
+    newArr.push(i);
+  }
+
+  var quot = 0;
+  var loop = 1;
+  var n;
+
+  do {
+    quot = newArr[0] * loop * newArr[1];
+    for (n = 2; n < newArr.length; n++) {
+      if (quot % newArr[n] !== 0) {
+        break;
+      }
+    }
+
+    loop++;
+  } while (n !== newArr.length);
+
+  return quot;
+}
+
+smallestCommons([1, 5]);
     </script>
     </body>
 </html>
