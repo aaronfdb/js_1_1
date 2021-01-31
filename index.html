@@ -14,23 +14,17 @@
     </head>
     <body>
     <script>
-    // Intermediate Algorithm Scripting Sum All Odd Fibonacci Numbers
-    function sumFibs(num) {
-  var prevNumber = 0;
-  var currNumber = 1;
-  var result = 0;
-  while (currNumber <= num) {
-    if (currNumber % 2 !== 0) {
-      result += currNumber;
-    }
-  
-  currNumber += prevNumber;
-  prevNumber = currNumber - prevNumber;
-  }
-  return result;
-}
+    // Intermediate Algorithm Scripting Sum All Primes
+        function sumPrimes(num) {
+            let primes = [];
+            for (let i = 2; i <= num; i++) {
+                if (primes.every((prime) => i % prime !== 0))
+                primes.push(i);
+            }
+            return primes.reduce((sum, prime) => sum + prime, 0);
+        }
 
-sumFibs(4);
+        sumPrimes(10);
     </script>
     </body>
 </html>
