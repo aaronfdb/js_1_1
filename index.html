@@ -14,36 +14,20 @@
     </head>
     <body>
     <script>
-    // Intermediate Algorithm Scripting Smallest Common Multiple
-    function smallestCommons(arr) {
-  arr.sort(function(a, b) {
-    return b - a;
-  });
-
-  var newArr = [];
-  for (var i = arr[0]; i >= arr[1]; i--) {
-    newArr.push(i);
-  }
-
-  var quot = 0;
-  var loop = 1;
-  var n;
-
-  do {
-    quot = newArr[0] * loop * newArr[1];
-    for (n = 2; n < newArr.length; n++) {
-      if (quot % newArr[n] !== 0) {
-        break;
-      }
+    // Intermediate Algorithm Scripting Drop It
+    function dropElements(arr, func) {
+  var times = arr.length;
+  for (var i = 0; i < times; i++) {
+    if (func(arr[0])) {
+      break;
+    } else {
+      arr.shift();
     }
-
-    loop++;
-  } while (n !== newArr.length);
-
-  return quot;
+  }
+  return arr;
 }
 
-smallestCommons([1, 5]);
+dropElements([1, 2, 3, 4], function(n) {return n < 3; });
     </script>
     </body>
 </html>
