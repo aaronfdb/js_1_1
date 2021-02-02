@@ -14,37 +14,29 @@
     </head>
     <body>
     <script>
-    // Intermediate Algorithm Scripting Make A Person
-    var Person = function(firstAndLast) {
-  var fullName = firstAndLast;
+    // Intermediate Algorithm Scripting Map the Debris
+    function orbitalPeriod(arr) {
+  var GM = 398600.4418;
+  var earthRadius = 6367.4447;
+  var a = 2 * Math.PI;
+  var newArr = [];
 
-  this.getFirstName = function() {
-    return fullName.split(" ")[0];
+  var getOrbPeriod = function(obj) {
+    var c = Math.pow(earthRadius + obj.avgAlt, 3);
+    var b = Math.sqrt(c / GM);
+    var orbPeriod = Math.round(a * b);
+    // create new object
+    return {name: obj.name, orbitalPeriod: orbPeriod};
   };
 
-  this.getLastName = function() {
-    return fullName.split(" ")[1];
-  };
+  for (var elem in arr) {
+    newArr.push(getOrbPeriod(arr[elem]));
+  }
 
-  this.getFullName = function() {
-    return fullName;
-  };
+  return newArr;
+}
 
-  this.setFirstName = function(name) {
-    fullName = name + " " + fullName.split(" ")[1];
-  };
-
-  this.setLastName = function(name) {
-    fullName = fullName.split(" ")[0] + " " + name;
-  };
-
-  this.setFullName = function(name) {
-    fullName = name;
-  };
-};
-
-var bob = new Person("Bob Ross");
-bob.getFullName();
+orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]);
     </script>
     </body>
 </html>
